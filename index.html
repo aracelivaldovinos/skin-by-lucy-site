@@ -31,7 +31,9 @@ h3{font-size:1.6rem}
 .kicker{display:inline-flex;align-items:center;gap:10px;font:600 .74rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mocha);margin-bottom:16px}
 .kicker::before{content:"";width:9px;height:14px;background:var(--orchid);border-radius:0 100% 0 100%;transform:rotate(-20deg)}
 .lede{font-size:1.06rem;color:var(--muted);max-width:600px;margin-top:14px}
-section{padding:96px 0}
+section{padding:80px 0}
+.sec-head{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end}
+.sec-head .lede{margin-top:0;padding-bottom:8px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 .98rem/1 var(--sans);padding:16px 26px;border-radius:999px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .15s,background .15s,border-color .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn svg{width:17px;height:17px}
@@ -61,7 +63,7 @@ section{padding:96px 0}
 .menu-btn svg{width:30px;height:30px}
 
 /* HERO */
-.hero{padding:64px 0 84px;background:radial-gradient(900px 500px at 85% 10%,var(--blush),transparent 70%)}
+.hero{padding:48px 0 64px;background:radial-gradient(900px 500px at 85% 10%,var(--blush),transparent 70%)}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
 .hero h1{font-size:clamp(3rem,6vw,5.1rem);font-weight:600}
 .hero p.sub{font-size:1.12rem;color:var(--muted);max-width:520px;margin-top:22px}
@@ -94,7 +96,7 @@ section{padding:96px 0}
 .ctab{font:600 .92rem/1 var(--sans);padding:13px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--cocoa);cursor:pointer;transition:.15s}
 .ctab:hover{border-color:var(--taupe)}
 .ctab[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
-.panel{margin-top:26px;display:grid;grid-template-columns:1.15fr .85fr;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden;min-height:420px}
+.panel{margin-top:26px;display:grid;grid-template-columns:1.1fr .9fr;background:#fff;border:1px solid var(--line);border-radius:28px;overflow:hidden}
 .panel .txt{padding:44px}
 .panel h3{font-size:2.3rem}
 .panel .why{color:var(--muted);margin-top:12px;max-width:520px}
@@ -104,9 +106,15 @@ section{padding:96px 0}
 .rec small{grid-column:1;color:var(--muted);font-size:.84rem}
 .rec .pr{grid-row:1/3;grid-column:2;text-align:right;font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--wine);line-height:1}
 .rec .pr span{display:block;font:500 .7rem/1.4 var(--sans);color:var(--muted);letter-spacing:.04em}
-.panel .side{background:var(--blush);position:relative;display:flex;align-items:center;justify-content:center;padding:30px}
-.panel .side img{border-radius:18px;max-height:360px;width:100%;object-fit:cover;box-shadow:0 20px 40px -24px rgba(46,36,32,.5)}
-.panel .side .note{position:absolute;left:30px;right:30px;bottom:18px;text-align:center;font-size:.78rem;color:var(--cocoa)}
+.panel .side{background:var(--blush);display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:30px}
+.panel .side .vis{position:relative}
+.panel .side .vis img{border-radius:16px;width:100%;max-height:none;box-shadow:0 20px 40px -24px rgba(46,36,32,.5)}
+.panel .side .vis .cap{margin-top:10px;font-size:.8rem;color:var(--cocoa);text-align:center}
+.panel .side .qwrap{flex:1;display:flex;align-items:center;justify-content:center;padding:20px 6px}
+.kf{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kf div{background:#fff;border-radius:14px;padding:14px 12px}
+.kf small{display:block;font:600 .66rem/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--plum)}
+.kf b{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:600;line-height:1.15;margin-top:6px}
 .panel .side .quote{font-family:var(--serif);font-size:1.7rem;line-height:1.2;color:var(--cocoa);font-style:italic;text-align:center;max-width:320px}
 .panel .side .quote small{display:block;font:500 .82rem/1.4 var(--sans);font-style:normal;margin-top:14px;color:var(--muted)}
 .fade{animation:fade .35s ease}
@@ -234,6 +242,11 @@ form .btn{width:100%;margin-top:4px}
 .thanks img{width:110px;margin:0 auto}
 .thanks b{font-family:var(--serif);font-size:2rem;display:block;margin:12px 0 6px}
 
+.first{margin-top:26px;background:var(--lilac);border-radius:20px;padding:22px 24px}
+.first b{font-family:var(--serif);font-size:1.45rem;font-weight:600}
+.first ul{list-style:none;margin-top:10px;display:grid;gap:10px}
+.first li{display:flex;align-items:center;gap:12px;font-size:.92rem;color:var(--cocoa)}
+.first li span{flex:none;min-width:58px;text-align:center;font:700 .8rem/1 var(--sans);background:#fff;color:var(--wine);padding:8px 8px;border-radius:999px}
 /* FOOTER */
 footer{background:var(--ink);color:#CDBFB5;padding:48px 0;font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
@@ -267,8 +280,11 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
   .result-card{width:215px}
   .leafdeco{width:90px}
   .panel{grid-template-columns:1fr}
+  .sec-head{grid-template-columns:1fr;gap:0}
+  .sec-head .lede{margin-top:14px;padding-bottom:0}
   .panel .txt{padding:28px 24px}
-  .panel .side{min-height:0;padding:24px 24px 44px}
+  .panel .side{padding:22px}
+  .kf b{font-size:1rem}
   .res-grid,.menu,.promise-grid,.book-grid{grid-template-columns:1fr;gap:22px}
   .promise-grid{gap:40px}
   .promise-art{max-width:420px;width:100%;margin:0 auto}
@@ -376,9 +392,9 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
 
 <section id="concerns">
   <div class="wrap">
-    <div class="rv">
-      <span class="kicker">Find your treatment</span>
-      <h2>What's bothering<br>your <em>skin?</em></h2>
+    <div class="sec-head rv">
+      <div><span class="kicker">Find your treatment</span>
+      <h2>What's bothering your <em>skin?</em></h2></div>
       <p class="lede">Choose what you'd like to fix, and see what Lucy usually recommends, how many sessions it takes and what it costs.</p>
     </div>
     <div class="concern-tabs rv" role="tablist" aria-label="Skin concerns">
@@ -396,9 +412,10 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
 
 <section class="results" id="results">
   <div class="wrap">
-    <div class="rv">
-      <span class="kicker">Real results</span>
-      <h2>Clients from <em>this</em> spa,<br>not stock photos</h2>
+    <div class="sec-head rv">
+      <div><span class="kicker">Real results</span>
+      <h2>Clients from <em>this</em> spa, not stock photos</h2></div>
+      <p class="lede">Every photo here is a Skin By Lucy client, before and after treatment. Results vary from person to person, and Lucy will tell you what to realistically expect.</p>
     </div>
     <div class="res-grid">
       <article class="res rv">
@@ -418,7 +435,7 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
     <div class="price-head rv">
       <div>
         <span class="kicker">Treatments &amp; prices</span>
-        <h2>Clear prices,<br><em>no surprises</em></h2>
+        <h2>Clear prices, <em>no surprises</em></h2>
       </div>
       <div class="toggle" role="group" aria-label="Show prices for">
         <button aria-pressed="true" data-m="0">Regular price</button>
@@ -434,10 +451,10 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
 
 <section class="specials" id="specials">
   <div class="wrap">
-    <div class="rv">
-      <span class="kicker">Specials</span>
-      <h2>Ways to <em>save</em> every visit</h2>
-      <p class="lede">Mention the special when you book.</p>
+    <div class="sec-head rv">
+      <div><span class="kicker">Specials</span>
+      <h2>Ways to <em>save</em> every visit</h2></div>
+      <p class="lede">Mention the special when you book, and we'll apply it to your treatment.</p>
     </div>
     <div class="sp-grid">
       <div class="coupon rv"><div class="amt">15%<small>off</small></div><div><b>Your first visit</b><span>Welcome to Skin By Lucy</span></div></div>
@@ -498,6 +515,14 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><b>4222 Trinity Mills Rd, Suite 224</b>Westgrove building, 2nd floor, on the left<br>Dallas, TX 75287</div></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><b>Call or text</b><a href="tel:+19728542267">(972) 854-2267</a></div></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><b>Email</b><a href="mailto:skinbylucymed@gmail.com">skinbylucymed@gmail.com</a></div></div>
+      </div>
+      <div class="first">
+        <b>Your first visit</b>
+        <ul>
+          <li><span>15%</span>off your first treatment</li>
+          <li><span>$50</span>off when you bring a friend</li>
+          <li><span>12 hr</span>notice to cancel, or a $35 fee applies</li>
+        </ul>
       </div>
     </div>
     <form id="form" class="rv" novalidate>
@@ -562,13 +587,13 @@ footer .fb img{height:70px;background:var(--cream);border-radius:12px;padding:6p
 
 <script>
 const C={
-  acne:{t:"Acne & breakouts",w:"Calm active breakouts with deep extractions, a peel and blue LED light, then keep them away with a home plan.",r:[["Moderate acne treatment","Extractions, peel and LED light therapy",109,69],["Severe acne treatment","Deeper extractions for cystic or widespread acne",129,89],["Express HydraFacial","A good monthly follow-up to keep pores clear",119,89]],img:"ba-acne",cap:"Real result after one acne therapy session"},
-  scars:{t:"Acne scars & texture",w:"Microneedling builds new collagen to smooth pitted scars and rough texture. Most people need 4–8 sessions, one month apart.",r:[["Premium microneedling (MD Pen)","With salmon DNA serum · minimal downtime",275,179],["RF microneedling (EndyMed)","Radiofrequency for deeper scars · red for 24–36 hrs",400,229],["BioRePeel + microneedling","Peel and needling together for texture and tone",null,null]],img:"ba-genet",cap:"Real result with microneedling and brightening creams"},
-  spots:{t:"Dark spots & melasma",w:"Microneedling with compounded brightening creams lightens dark spots and evens your tone. Lucy's skin lightener helps keep them faded at home.",r:[["Premium microneedling (MD Pen)","With compounded lightening creams",275,179],["Express microneedling (MD Pen)","A shorter session for maintenance",175,109],["Surfacing skin lightener","At-home cream, 50 g",75,null]],img:"ba-genet",cap:"Real result: dark spots faded with microneedling"},
-  lines:{t:"Fine lines & firmness",w:"Radiofrequency microneedling tightens skin and softens fine lines around the eyes, mouth and neck, in a walk-in, walk-out appointment.",r:[["RF microneedling (EndyMed)","60 minutes · 4–8 sessions, a month apart",400,229],["Premium microneedling (MD Pen)","Collagen induction with salmon DNA serum",275,179],["Premium HydraFacial","A good prep before each microneedling session",189,"1st free"]],q:"I feel very vibrant, beautiful, connected.",qs:"Google review"},
-  bumps:{t:"Skin tags, milia & moles",w:"Small skin tags, milia, cholesterol deposits, keratosis and cherry angiomas can be removed quickly, with a healing cream to take home.",r:[["Skin irregularity removal","Per spot, up to ½ cm",45,19]],q:"She was very patient and took her time because I was scared, especially my upper eyelid.",qs:"Google review · mole removal"},
-  glow:{t:"Dull, tired skin",w:"A HydraFacial cleans, exfoliates and hydrates in 30–60 minutes with no downtime. Your skin looks brighter right away.",r:[["Premium HydraFacial","60 minutes · deep cleanse, extraction and infusion",189,"1st free"],["Express HydraFacial","30 minutes · great before an event",119,89],["In & Out HydraFacial","A quick lunch-break refresh",89,69]],q:"My skin felt so clean, fresh, and refreshed afterward.",qs:"Google review · facial"},
-  scalp:{t:"Thinning hair & scalp",w:"HydraFacial Keravive cleans and stimulates the scalp, then infuses growth factors and peptides for thicker, healthier-looking hair.",r:[["HydraFacial Keravive","Scalp cleanse and peptide infusion",null,null],["Back, chest & shoulders HydraFacial","Deep exfoliation for body breakouts",250,129]],q:"Dry scalp and thinning hair don't have to be permanent.",qs:"From Lucy's treatment notes"}
+  acne:{t:"Acne & breakouts",w:"Calm active breakouts with deep extractions, a peel and blue LED light, then keep them away with a home plan.",r:[["Moderate acne treatment","Extractions, peel and LED light therapy",109,69],["Severe acne treatment","Deeper extractions for cystic or widespread acne",129,89],["Express HydraFacial","A good monthly follow-up to keep pores clear",119,89]],img:"ba-acne",cap:"Real result after one acne therapy session",f:[["Results","After 1 visit"],["Downtime","None"],["Includes","Extractions"]]},
+  scars:{t:"Acne scars & texture",w:"Microneedling builds new collagen to smooth pitted scars and rough texture. Most people need 4–8 sessions, one month apart.",r:[["Premium microneedling (MD Pen)","With salmon DNA serum · minimal downtime",275,179],["RF microneedling (EndyMed)","Radiofrequency for deeper scars · red for 24–36 hrs",400,229],["BioRePeel + microneedling","Peel and needling together for texture and tone",null,null]],img:"ba-genet",cap:"Real result with microneedling and brightening creams",f:[["Sessions","4–8, monthly"],["Downtime","Red 24–36 hrs"],["Time","About 60 min"]]},
+  spots:{t:"Dark spots & melasma",w:"Microneedling with compounded brightening creams lightens dark spots and evens your tone. Lucy's skin lightener helps keep them faded at home.",r:[["Premium microneedling (MD Pen)","With compounded lightening creams",275,179],["Express microneedling (MD Pen)","A shorter session for maintenance",175,109],["Surfacing skin lightener","At-home cream, 50 g",75,null]],img:"ba-genet",cap:"Real result: dark spots faded with microneedling",f:[["Sessions","4–8, monthly"],["Downtime","Minimal"],["At home","Lightener cream"]]},
+  lines:{t:"Fine lines & firmness",w:"Radiofrequency microneedling tightens skin and softens fine lines around the eyes, mouth and neck, in a walk-in, walk-out appointment.",r:[["RF microneedling (EndyMed)","60 minutes · 4–8 sessions, a month apart",400,229],["Premium microneedling (MD Pen)","Collagen induction with salmon DNA serum",275,179],["Premium HydraFacial","A good prep before each microneedling session",189,"1st free"]],q:"I feel very vibrant, beautiful, connected.",qs:"Google review",f:[["Sessions","4–8, monthly"],["Downtime","Red 24–36 hrs"],["Time","About 60 min"]]},
+  bumps:{t:"Skin tags, milia & moles",w:"Small skin tags, milia, cholesterol deposits, keratosis and cherry angiomas can be removed quickly, with a healing cream to take home.",r:[["Skin irregularity removal","Per spot, up to ½ cm",45,19]],q:"She was very patient and took her time because I was scared, especially my upper eyelid.",qs:"Google review · mole removal",f:[["Time","Quick visit"],["First visit","Start with one"],["Aftercare","Healing cream"]]},
+  glow:{t:"Dull, tired skin",w:"A HydraFacial cleans, exfoliates and hydrates in 30–60 minutes with no downtime. Your skin looks brighter right away.",r:[["Premium HydraFacial","60 minutes · deep cleanse, extraction and infusion",189,"1st free"],["Express HydraFacial","30 minutes · great before an event",119,89],["In & Out HydraFacial","A quick lunch-break refresh",89,69]],q:"My skin felt so clean, fresh, and refreshed afterward.",qs:"Google review · facial",f:[["Time","30–60 min"],["Downtime","None"],["Results","Right away"]]},
+  scalp:{t:"Thinning hair & scalp",w:"HydraFacial Keravive cleans and stimulates the scalp, then infuses growth factors and peptides for thicker, healthier-looking hair.",r:[["HydraFacial Keravive","Scalp cleanse and peptide infusion",null,null],["Back, chest & shoulders HydraFacial","Deep exfoliation for body breakouts",250,129]],q:"Dry scalp and thinning hair don't have to be permanent.",qs:"From Lucy's treatment notes",f:[["Good for","Thinning, dry scalp"],["Needles","None"],["Feels like","Scalp massage"]]}
 };
 const IMG={"ba-acne":document.querySelector('.res-grid .res:nth-child(2) img').src,"ba-genet":document.querySelector('.res-grid .res:nth-child(1) img').src};
 let member=false;
@@ -578,8 +603,8 @@ function priceCell(row){const [n,s,reg,mem]=row; if(reg===null)return `<div clas
   return `<div class="pr">$${reg}<span>${mem!==null?"regular":"price"}</span></div>`;}
 let cur="acne";
 function showC(k){cur=k;const d=C[k];const p=document.getElementById('panel');
-  const side=d.img?`<div class="side"><div style="position:relative;width:100%"><img src="${IMG[d.img]}" alt="Before and after"><span class="ba-lbl" style="left:12px;top:12px">Before</span><span class="ba-lbl" style="right:12px;top:12px">After</span></div><div class="note">${d.cap}</div></div>`
-    :`<div class="side"><p class="quote">"${d.q}"<small>${d.qs}</small></p></div>`;
+  const vis=d.img?`<div class="vis"><img src="${IMG[d.img]}" alt="Before and after"><span class="ba-lbl" style="left:12px;top:12px">Before</span><span class="ba-lbl" style="right:12px;top:12px">After</span><p class="cap">${d.cap}</p></div>`:`<div class="qwrap"><p class="quote">"${d.q}"<small>${d.qs}</small></p></div>`;
+  const side=`<div class="side">${vis}<div class="kf">${d.f.map(x=>`<div><small>${x[0]}</small><b>${x[1]}</b></div>`).join("")}</div></div>`;
   p.innerHTML=`<div class="txt fade"><h3>${d.t}</h3><p class="why">${d.w}</p><div class="recs">${d.r.map(r=>`<div class="rec"><b>${r[0]}</b><small>${r[1]}</small>${priceCell(r)}</div>`).join('')}</div><a class="btn btn-wine" href="#book" data-t="${k==='bumps'?'Skin tag, milia or mole removal':k==='scalp'?'HydraFacial Keravive (scalp)':k==='glow'?'HydraFacial':k==='acne'?'Acne therapy':'Microneedling'}" style="margin-top:24px">Book a consultation</a></div>${side}`;}
 document.querySelectorAll('.ctab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.ctab').forEach(x=>x.setAttribute('aria-selected',x===b));showC(b.dataset.c);}));
 
